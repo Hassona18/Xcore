@@ -15,8 +15,8 @@ body{
         line-height: 26px;
     font-weight: 300;
     color: silver;
-}
-
+    cursor: url("/images/cursor/sword.png");
+  }
 
 .container-x {
     width: 75%;
