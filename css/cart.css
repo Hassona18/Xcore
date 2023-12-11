@@ -1,3 +1,49 @@
+.header {
+  padding: 20px 0;
+  border-bottom: 1px solid #eee;
+}
+.navbar {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.navbar-brand {
+  margin-right: 15px;
+}
+.navbar-toggler {
+  padding: 10px;
+  font-size: 20px;
+  cursor: pointer;
+}
+.navbar-nav {
+  display: flex;
+  align-items: center;
+}
+.navbar-nav .nav-item {
+  margin-right: 15px;
+}
+.navbar-nav .nav-link {
+  text-decoration: none;
+  color: #333;
+}
+.navbar-nav .nav-link:hover {
+  color: red;
+}
+.navbar-nav .nav-item .nav-link.active {
+  color: red;
+}
+.socail {
+  display: flex;
+  align-items: center;
+}
+.socail a {
+  text-decoration: none;
+  color: #333;
+  margin-left: 15px;
+}
+.socail a:hover {
+  color: red;
+}
 body {
     font-family: sans-serif;
   }
@@ -24,7 +70,7 @@ body {
     display: block;
     margin: 10px auto;
     padding: 10px 20px;
-    background-color: #910c0c;
+    background-color: red;
     color: #fff;
     border: none;
     cursor: pointer;
