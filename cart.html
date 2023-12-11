@@ -1,31 +1,193 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Shopping Cart</title>
-  <link rel="stylesheet" href="/css/cart.css">
-</head>
-<body>
-  <h1>Shopping Cart</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Product</th>
-        <th>Price</th>
-        <th>Quantity</th>
-        <th>Subtotal</th>
-        <th>Remove</th>
-      </tr>
-    </thead>
-    <tbody id="cart-items">
-      </tbody>
-  </table>
-  <hr>
-  <div id="cart-total">
-    Total: <span id="total-price">0</span>
-  </div>
-  <a href="checkout.html"><button id="checkout-button">Checkout</button></a>
-  <script src="/js/cart.js"></script>
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="/css/cart.css" />
+    <link rel="stylesheet" href="/css/style.css" />
+
+    <style>
+      .header {
+        padding: 20px 0;
+        border-bottom: 1px solid #eee;
+      }
+      .navbar {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+      }
+      .navbar-brand {
+        margin-right: 15px;
+      }
+      .navbar-toggler {
+        padding: 10px;
+        font-size: 20px;
+        cursor: pointer;
+      }
+      .navbar-nav {
+        display: flex;
+        align-items: center;
+      }
+      .navbar-nav .nav-item {
+        margin-right: 15px;
+      }
+      .navbar-nav .nav-link {
+        text-decoration: none;
+        color: #333;
+      }
+      .navbar-nav .nav-link:hover {
+        color: #007bff;
+      }
+      .navbar-nav .nav-item .nav-link.active {
+        color: #007bff;
+      }
+      .socail {
+        display: flex;
+        align-items: center;
+      }
+      .socail a {
+        text-decoration: none;
+        color: #333;
+        margin-left: 15px;
+      }
+      .socail a:hover {
+        color: #007bff;
+      }
+    </style>
+  </head>
+  <body>
+    <!-- start header -->
+    <header class="header" id="header">
+      <nav class="navbar navbar-expand-xl">
+        <a class="navbar-brand" href="index.html">
+          <img src="images/Home/logo-header.png" alt="logo" />
+        </a>
+        <button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle navigation"
+          id="navbartoggler"
+        >
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item Active">
+              <a class="nav-link active" aria-current="page" href="index.html"
+                >Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="merch.html">Shop</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="ourteam.html">Our Squad</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="gallery.html">Gallery</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blog.html">BLOG</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">contact us</a>
+            </li>
+          </ul>
+          <div class="socail">
+            <a href="#"
+              ><i class="fa-solid fa-magnifying-glass" id="Search"></i
+            ></a>
+            <a href="cart.html"
+              ><i class="fa-solid fa-cart-shopping" id="Rotator"></i
+            ></a>
+          </div>
+        </div>
+      </nav>
+    </header>
+    <!-- end header -->
+    <br><br><br><br><br>
+    <!-- start table -->
+    <h1 class="cart">Shopping Cart</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Product</th>
+          <th>Price</th>
+          <th>Quantity</th>
+          <th>Subtotal</th>
+          <th>Remove</th>
+        </tr>
+      </thead>
+      <tbody id="cart-items"></tbody>
+    </table>
+    <hr />
+    <div id="cart-total">Total: <span id="total-price">0</span></div>
+    <!-- go to checkout page -->
+    <a href="checkout.html"><button id="checkout-button">Checkout</button></a>
+
+    <!-- Footer start -->
+    <footer>
+      <div class="container py-5">
+        <div class="row flex-column align-items-center BigHold">
+          <div
+            class="col-xxl-8 col-xl-10 -offset-xl-2 offset-lg-0 col-lg-12 mb-3 text-center"
+          >
+            <div class="links text-center d-flex justify-content-center mb-3">
+              <div class="link">
+                <a href="index.html">Home</a>
+              </div>
+              <div class="link">
+                <a href="merch.html">Shop</a>
+              </div>
+              <div class="link">
+                <a href="ourteam.html">Our Squad</a>
+              </div>
+              <div class="link">
+                <a href="gallery.html">Gallery</a>
+              </div>
+              <div class="link">
+                <a href="blog.html">Blog</a>
+              </div>
+              <div class="link">
+                <a href="contact.html">Contact Us</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-lg-12 downbord py-3">
+            <div class="row justify-content-center">
+              <div class="col-lg-8 footext text-center mb-3">
+                <h3>
+                  This Website is made with ❤  by
+                  <a href="hassananees188@gmail.com"
+                    >Hassan Anees</a
+                  >
+                </h3>
+              </div>
+              <div class="col-lg-3 footicon">
+                <a href="https://www.linkedin.com/in/hassan-anees-071a13224"
+                  ><i class="fa-brands fa-linkedin"></i
+                ></a>
+                <a href="https://github.com/Hassona18"
+                  ><i class="fa-brands fa-github"></i
+                ></a>
+                <a href="https://instagram.com/hassan6476hassan?igshid=MzMyNGUyNmU2YQ=="
+                  ><i class="fa-brands fa-instagram"></i
+                ></a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Footer End -->
+
+    <!-- javascript -->
+    <script src="/js/cart.js"></script>
+  </body>
 </html>
