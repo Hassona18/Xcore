@@ -1,0 +1,16 @@
+pages: 8
+Home
+View book
+Cart
+Sign up
+Sign in
+View my books
+Edit book
+Add book
+===================
+Seller: 
+View my Books  -> Add book -> edit book -> View my Books
+============================================
+Customer:
+Sign up or in -> Home-> view book-> cart-> Home
+============================================
