@@ -1,0 +1,32 @@
+body {
+    font-family: sans-serif;
+  }
+  
+  table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  th, td {
+    padding: 10px;
+    text-align: left;
+  }
+  
+  th {
+    font-weight: bold;
+  }
+  
+  #cart-total {
+    text-align: right;
+  }
+  
+  #checkout-button {
+    display: block;
+    margin: 10px auto;
+    padding: 10px 20px;
+    background-color: #910c0c;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+  }
+  
