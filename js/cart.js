@@ -71,85 +71,80 @@
 // }
 
 let cartItems = [
-  { product: 'ROG 15    ', price: 15000, quantity: 1  },
-  { product: 'Air Puds  ', price: 600, quantity: 2  },
-  { product: 'Case      ', price: 30, quantity: 3  },
-  { product: 'Product 4 ', price: 10, quantity: 2  },
-  { product: 'Product 5 ', price: 20, quantity: 5  },
-  { product: 'Product 6 ', price: 30, quantity: 3  },
-  { product: 'Product 7 ', price: 10, quantity: 11 },
-  { product: 'Product 8 ', price: 20, quantity: 23 },
-  { product: 'Product 9 ', price: 30, quantity: 30 },
-  { product: 'Product 10', price: 10, quantity: 1  },
- ];
- 
- let totalPrice = 0;
- 
- function displayCartItems() {
-  let tbody = document.getElementById('cart-items');
-  tbody.innerHTML = '';
- 
+  { product: "ROG 15    ", price: 15000, quantity: 1 },
+  { product: "Air Puds  ", price: 600, quantity: 2 },
+  { product: "Case      ", price: 30, quantity: 3 },
+  { product: "Product 4 ", price: 10, quantity: 2 },
+  { product: "Product 5 ", price: 20, quantity: 5 },
+];
+
+let totalPrice = 0;
+
+function displayCartItems() {
+  let tbody = document.getElementById("cart-items");
+  tbody.innerHTML = "";
+
   cartItems.forEach((item, index) => {
-     let tr = document.createElement('tr');
-     let tdProduct = document.createElement('td');
-     let tdPrice = document.createElement('td');
-     let tdQuantity = document.createElement('td');
-     let tdSubtotal = document.createElement('td');
-     let tdRemove = document.createElement('td');
- 
-     tdProduct.textContent = item.product;
-     tdPrice.textContent = '$' + item.price;
-     tdQuantity.textContent = item.quantity;
-     tdSubtotal.textContent = '$' + (item.price * item.quantity);
- 
-     let removeButton = document.createElement('button');
-     removeButton.textContent = 'Remove';
-     removeButton.addEventListener('click', () => {
-       cartItems.splice(index, 1);
-       displayCartItems();
-     });
- 
-     tdRemove.appendChild(removeButton);
- 
-     tr.appendChild(tdProduct);
-     tr.appendChild(tdPrice);
-     tr.appendChild(tdQuantity);
-     tr.appendChild(tdSubtotal);
-     tr.appendChild(tdRemove);
- 
-     tbody.appendChild(tr);
+    let tr = document.createElement("tr");
+    let tdProduct = document.createElement("td");
+    let tdPrice = document.createElement("td");
+    let tdQuantity = document.createElement("td");
+    let tdSubtotal = document.createElement("td");
+    let tdRemove = document.createElement("td");
+
+    tdProduct.textContent = item.product;
+    tdPrice.textContent = "$" + item.price;
+    tdQuantity.textContent = item.quantity;
+    tdSubtotal.textContent = "$" + item.price * item.quantity;
+
+    let removeButton = document.createElement("button");
+    removeButton.textContent = "Remove";
+    removeButton.addEventListener("click", () => {
+      cartItems.splice(index, 1);
+      displayCartItems();
+    });
+
+    tdRemove.appendChild(removeButton);
+
+    tr.appendChild(tdProduct);
+    tr.appendChild(tdPrice);
+    tr.appendChild(tdQuantity);
+    tr.appendChild(tdSubtotal);
+    tr.appendChild(tdRemove);
+
+    tbody.appendChild(tr);
   });
- 
+
   calculateTotalPrice();
- }
- 
- function calculateTotalPrice() {
+}
+
+function calculateTotalPrice() {
   totalPrice = cartItems.reduce((sum, item) => {
-     return sum + (item.price * item.quantity);
+    return sum + item.price * item.quantity;
   }, 0);
- 
-  document.getElementById('total-price').textContent = totalPrice;
- }
- 
- displayCartItems();
- // Handle the radio button selection
+
+  document.getElementById("total-price").textContent = totalPrice;
+}
+
+displayCartItems();
+// Handle the radio button selection
 const paymentMethodInput = document.querySelectorAll("[name='payment-method']");
 
-paymentMethodInput.forEach(input => {
+paymentMethodInput.forEach((input) => {
   input.addEventListener("change", () => {
     // Update UI or submit form based on selected payment method
     const selectedMethod = input.value;
   });
-// });
-// const cashRadio = document.getElementById('payment-cash');
-// const visaRadio = document.getElementById('payment-visa');
-// const checkoutButton = document.getElementById('checkout-button');
-// function handlePaymentMethodClick(radio) {
-//    const selectedMethod = radio.value;
-//    if (selectedMethod === "cash") {
-//      window.location.href = "checkout_cash.html";
-//    } else if (selectedMethod === "visa") {
-//      window.location.href = "checkout.html"; // Update to your specific checkout page URL
-//    }
-// }
-})
+  // });
+  // const cashRadio = document.getElementById('payment-cash');
+  // const visaRadio = document.getElementById('payment-visa');
+  // const checkoutButton = document.getElementById('checkout-button');
+  // function handlePaymentMethodClick(radio) {
+  //    const selectedMethod = radio.value;
+  //    if (selectedMethod === "cash") {
+  //      window.location.href = "checkout_cash.html";
+  //    } else if (selectedMethod === "visa") {
+  //      window.location.href = "checkout.html"; // Update to your specific checkout page URL
+  //    }
+  // }
+});
