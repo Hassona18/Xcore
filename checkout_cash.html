@@ -3,13 +3,9 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Shopping Cart</title>
-    <link rel="stylesheet" href="css/cart.css">
+    <title>Checkout</title>
+    <link rel="stylesheet" href="css/checkout.css">
     <link rel="stylesheet" href="css/style.css">
-
-    <style>
-     
-    </style>
   </head>
   <body>
     <!-- start header -->
@@ -54,10 +50,10 @@
             </li>
           </ul>
           <div class="socail">
-            <a href="#" title="social"
+            <a href="#"
               ><i class="fa-solid fa-magnifying-glass" id="Search"></i
             ></a>
-            <a href="cart.html" title="cart"
+            <a href="cart.html"
               ><i class="fa-solid fa-cart-shopping" id="Rotator"></i
             ></a>
           </div>
@@ -65,36 +61,53 @@
       </nav>
     </header>
     <!-- end header -->
-    <br><br><br><br><br>
-    <!-- start table -->
-    <h1 class="cart">Shopping Cart</h1>
-    <table>
-      <thead>
-        <tr>
-          <th>Product</th>
-          <th>Price</th>
-          <th>Quantity</th>
-          <th>Subtotal</th>
-          <th>Remove</th>
-        </tr>
-      </thead>
-      <tbody id="cart-items"></tbody>
-    </table>
-    <hr />
-    <div id="cart-total">Total: <span id="total-price">0</span></div>
-
-    <!-- Payment method -->
-    <div class="payment-options">
-      <h4>Payment method</h4>
-
-    </div>
-    
-    <!-- Payment method -->
-
-
-    <!-- go to checkout page -->
-    <a href="checkout.html"><button id="checkout-button">Checkout-visa</button></a>
-    <a href="checkout_cash.html"><button id="checkout-button">Checkout-cash</button></a>
+    <br /><br /><br />
+    <!-- start checkout page -->
+    <h1>Checkout</h1>
+    <form id="checkout-form">
+      <h2>Shipping Information</h2>
+      <label for="name">Full Name:</label>
+      <input type="text" id="name" name="name" required />
+      <br />
+      <label for="address">Address:</label>
+      <input type="text" id="address" name="address" required />
+      <br />
+      <label for="city">City:</label>
+      <input type="text" id="city" name="city" required />
+      <br />
+      <label for="state">State:</label>
+      <input type="text" id="state" name="state" required />
+      <br />
+      <label for="zip">Zip Code:</label>
+      <input type="text" id="zip" name="zip" required />
+      <br />
+      <hr />
+      <h2>Shipping Options</h2>
+      <label for="standard-shipping">
+        Standard Shipping (5-7 days) - $5.00
+        <input
+          type="radio"
+          id="standard-shipping"
+          name="shipping"
+          value="standard"
+          checked
+        />
+      </label>
+      <br />
+      <label for="express-shipping">
+        Express Shipping (2-3 days) - $10.00
+        <input
+          type="radio"
+          id="express-shipping"
+          name="shipping"
+          value="express"
+        />
+      </label>
+      <br />
+      <hr />
+      <button type="submit" id="place-order">Place Order</button>
+    </form>
+    <!-- end checkout page -->
     <!-- Footer start -->
     <footer>
       <div class="container py-5">
@@ -128,20 +141,24 @@
             <div class="row justify-content-center">
               <div class="col-lg-8 footext text-center mb-3">
                 <h3>
-                  This Website is made with ❤  by
-                  <a href="hassananees188@gmail.com"
+                  This Website is made with ❤ by
+                  <a href="https://www.facebook.com/xXAhmerrasXx/"
                     >Hassan Anees</a
                   >
                 </h3>
               </div>
               <div class="col-lg-3 footicon">
-                <a href="https://www.linkedin.com/in/hassan-anees-071a13224" title="linkedin"
+                <a
+                  href="https://www.linkedin.com/in/hassan-anees-071a13224"
+                  title="linkedin"
                   ><i class="fa-brands fa-linkedin"></i
                 ></a>
                 <a href="https://github.com/Hassona18" title="github"
                   ><i class="fa-brands fa-github"></i
                 ></a>
-                <a href="https://instagram.com/hassan6476hassan?igshid=MzMyNGUyNmU2YQ==" title="instagram"
+                <a
+                  href="https://instagram.com/hassan6476hassan?igshid=MzMyNGUyNmU2YQ=="
+                  title="instagram"
                   ><i class="fa-brands fa-instagram"></i
                 ></a>
               </div>
@@ -152,7 +169,6 @@
     </footer>
     <!-- Footer End -->
 
-    <!-- javascript -->
-    <script src="js/cart.js"></script>
+    <script src="js/checkout.js"></script>
   </body>
 </html>

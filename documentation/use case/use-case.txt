@@ -1,0 +1,17 @@
+    Actors:
+        Customer
+        Administrator
+
+    Use Cases:
+        Login
+        Search for Products
+        View Product Details
+        Add Item to Cart
+        Remove Item from Cart
+        Proceed to Checkout
+        Manage User Profile
+        Manage Products (for administrators)
+        Manage Orders (for administrators)
+
+    Relationships:
+        Connect actors to their associated use cases using lines/arrows.

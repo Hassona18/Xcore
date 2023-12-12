@@ -17,3 +17,4 @@ placeOrderButton.addEventListener("click", function (event) {
   // Reset form
   document.getElementById("checkout-form").reset();
 });
+

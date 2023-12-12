@@ -71,9 +71,16 @@
 // }
 
 let cartItems = [
-  { product: 'Product 1', price: 10, quantity: 1 },
-  { product: 'Product 2', price: 20, quantity: 2 },
-  { product: 'Product 3', price: 30, quantity: 3 },
+  { product: 'ROG 15    ', price: 15000, quantity: 1  },
+  { product: 'Air Puds  ', price: 600, quantity: 2  },
+  { product: 'Case      ', price: 30, quantity: 3  },
+  { product: 'Product 4 ', price: 10, quantity: 2  },
+  { product: 'Product 5 ', price: 20, quantity: 5  },
+  { product: 'Product 6 ', price: 30, quantity: 3  },
+  { product: 'Product 7 ', price: 10, quantity: 11 },
+  { product: 'Product 8 ', price: 20, quantity: 23 },
+  { product: 'Product 9 ', price: 30, quantity: 30 },
+  { product: 'Product 10', price: 10, quantity: 1  },
  ];
  
  let totalPrice = 0;
@@ -125,3 +132,24 @@ let cartItems = [
  }
  
  displayCartItems();
+ // Handle the radio button selection
+const paymentMethodInput = document.querySelectorAll("[name='payment-method']");
+
+paymentMethodInput.forEach(input => {
+  input.addEventListener("change", () => {
+    // Update UI or submit form based on selected payment method
+    const selectedMethod = input.value;
+  });
+// });
+// const cashRadio = document.getElementById('payment-cash');
+// const visaRadio = document.getElementById('payment-visa');
+// const checkoutButton = document.getElementById('checkout-button');
+// function handlePaymentMethodClick(radio) {
+//    const selectedMethod = radio.value;
+//    if (selectedMethod === "cash") {
+//      window.location.href = "checkout_cash.html";
+//    } else if (selectedMethod === "visa") {
+//      window.location.href = "checkout.html"; // Update to your specific checkout page URL
+//    }
+// }
+})

@@ -1,0 +1,46 @@
+Level 0 DFD (Context Diagram):
+
+This diagram represents the entire system as a single process with external entities.
+
+    Process: Online Shopping System
+    External Entities:
+        Customers
+        Administrators
+    Data Flow:
+        Orders from Customers to the Online Shopping System
+        Product Information from the System to Customers
+        Order Details from the System to Order Database
+        Management Commands from Administrators to the System
+    Data Stores:
+        Product Database
+        Order Database
+
+Level 1 DFD:
+
+This level provides more detail by breaking down the main processes into sub-processes.
+Online Shopping System:
+
+    Processes:
+        Process Orders
+        Manage Products
+        Manage Users
+    Data Flows:
+        Orders from Customers to Process Orders
+        Product Information from Manage Products to Customers
+        Order Details from Process Orders to Order Database
+        Management Commands from Manage Users/Administrators to respective processes
+
+Data Stores:
+
+    Product Database:
+        Product Details
+        Stock Levels
+    Order Database:
+        Order Details
+        Transaction Records
+
+Diagram Representation:
+
+    Level 0 (Context Diagram): Shows the entire system with external entities and major data flows.
+    Level 1 DFD: Provides a detailed breakdown of the main processes within the Online Shopping System.
+

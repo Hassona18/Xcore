@@ -76,3 +76,12 @@ body {
     cursor: pointer;
   }
   
+  .payment-options {
+    margin-top: 20px;
+  }
+  
+  .payment-options label {
+    display: block;
+    margin-bottom: 10px;
+  }
+  
