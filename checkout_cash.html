@@ -1,174 +1,141 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Checkout</title>
-    <link rel="stylesheet" href="css/checkout.css">
-    <link rel="stylesheet" href="css/style.css">
-  </head>
-  <body>
-    <!-- start header -->
-    <header class="header" id="header">
-      <nav class="navbar navbar-expand-xl">
-        <a class="navbar-brand" href="index.html">
-          <img src="images/Home/logo-header.png" alt="logo" />
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarSupportedContent"
-          aria-controls="navbarSupportedContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-          id="navbartoggler"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-            <li class="nav-item Active">
-              <a class="nav-link active" aria-current="page" href="index.html"
-                >Home</a
-              >
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="merch.html">Shop</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="ourteam.html">Our Squad</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="gallery.html">Gallery</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="blog.html">BLOG</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="contact.html">contact us</a>
-            </li>
-          </ul>
-          <div class="socail">
-            <a href="#"
-              ><i class="fa-solid fa-magnifying-glass" id="Search"></i
-            ></a>
-            <a href="cart.html"
-              ><i class="fa-solid fa-cart-shopping" id="Rotator"></i
-            ></a>
-          </div>
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Checkout</title>
+  <link rel="stylesheet" href="css/checkout.css">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+  <!-- start header -->
+  <header class="header" id="header">
+    <nav class="navbar navbar-expand-xl">
+      <a class="navbar-brand" href="index.html">
+        <img src="images/Home/logo-header.png" alt="logo" />
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+        aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation" id="navbartoggler">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+          <li class="nav-item Active">
+            <a class="nav-link active" aria-current="page" href="index.html">Home</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="merch.html">Shop</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="ourteam.html">Our Squad</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="gallery.html">Gallery</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="blog.html">BLOG</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="contact.html">contact us</a>
+          </li>
+        </ul>
+        <div class="socail">
+          <a href="#"><i class="fa-solid fa-magnifying-glass" id="Search"></i></a>
+          <a href="cart.html"><i class="fa-solid fa-cart-shopping" id="Rotator"></i></a>
         </div>
-      </nav>
-    </header>
-    <!-- end header -->
-    <br /><br /><br />
-    <!-- start checkout page -->
-    <h1>Checkout</h1>
-    <form id="checkout-form">
-      <h2>Shipping Information</h2>
-      <label for="name">Full Name:</label>
-      <input type="text" id="name" name="name" required />
-      <br />
-      <label for="address">Address:</label>
-      <input type="text" id="address" name="address" required />
-      <br />
-      <label for="city">City:</label>
-      <input type="text" id="city" name="city" required />
-      <br />
-      <label for="state">State:</label>
-      <input type="text" id="state" name="state" required />
-      <br />
-      <label for="zip">Zip Code:</label>
-      <input type="text" id="zip" name="zip" required />
-      <br />
-      <hr />
-      <h2>Shipping Options</h2>
-      <label for="standard-shipping">
-        Standard Shipping (5-7 days) - $5.00
-        <input
-          type="radio"
-          id="standard-shipping"
-          name="shipping"
-          value="standard"
-          checked
-        />
-      </label>
-      <br />
-      <label for="express-shipping">
-        Express Shipping (2-3 days) - $10.00
-        <input
-          type="radio"
-          id="express-shipping"
-          name="shipping"
-          value="express"
-        />
-      </label>
-      <br />
-      <hr />
-      <button type="submit" id="place-order">Place Order</button>
-    </form>
-    <!-- end checkout page -->
-    <!-- Footer start -->
-    <footer>
-      <div class="container py-5">
-        <div class="row flex-column align-items-center BigHold">
-          <div
-            class="col-xxl-8 col-xl-10 -offset-xl-2 offset-lg-0 col-lg-12 mb-3 text-center"
-          >
-            <div class="links text-center d-flex justify-content-center mb-3">
-              <div class="link">
-                <a href="index.html">Home</a>
-              </div>
-              <div class="link">
-                <a href="merch.html">Shop</a>
-              </div>
-              <div class="link">
-                <a href="ourteam.html">Our Squad</a>
-              </div>
-              <div class="link">
-                <a href="gallery.html">Gallery</a>
-              </div>
-              <div class="link">
-                <a href="blog.html">Blog</a>
-              </div>
-              <div class="link">
-                <a href="contact.html">Contact Us</a>
-              </div>
+      </div>
+    </nav>
+  </header>
+  <!-- end header -->
+  <br /><br /><br />
+  <!-- start checkout page -->
+  <h1>Checkout</h1>
+  <form id="checkout-form">
+    <h2>Shipping Information</h2>
+    <label for="name">Full Name:</label>
+    <input type="text" id="name" name="name" required />
+    <br />
+    <label for="address">Address:</label>
+    <input type="text" id="address" name="address" required />
+    <br />
+    <label for="city">City:</label>
+    <input type="text" id="city" name="city" required />
+    <br />
+    <label for="state">State:</label>
+    <input type="text" id="state" name="state" required />
+    <br />
+    <label for="zip">Zip Code:</label>
+    <input type="text" id="zip" name="zip" required />
+    <br />
+    <hr />
+    <h2>Shipping Options</h2>
+    <label for="standard-shipping">
+      Standard Shipping (5-7 days) - $5.00
+      <input type="radio" id="standard-shipping" name="shipping" value="standard" checked />
+    </label>
+    <br />
+    <label for="express-shipping">
+      Express Shipping (2-3 days) - $10.00
+      <input type="radio" id="express-shipping" name="shipping" value="express" />
+    </label>
+    <br />
+    <hr />
+    <button type="submit" id="place-order">Place Order</button>
+  </form>
+  <!-- end checkout page -->
+
+  <!-- Footer start -->
+  <footer>
+    <div class="container py-5">
+      <div class="row flex-column align-items-center BigHold">
+        <div class="col-xxl-8 col-xl-10 -offset-xl-2 offset-lg-0 col-lg-12 mb-3 text-center">
+          <div class="links text-center d-flex justify-content-center mb-3">
+            <div class="link">
+              <a href="index.html">Home</a>
+            </div>
+            <div class="link">
+              <a href="merch.html">Shop</a>
+            </div>
+            <div class="link">
+              <a href="ourteam.html">Our Squad</a>
+            </div>
+            <div class="link">
+              <a href="gallery.html">Gallery</a>
+            </div>
+            <div class="link">
+              <a href="blog.html">Blog</a>
+            </div>
+            <div class="link">
+              <a href="contact.html">Contact Us</a>
             </div>
           </div>
+        </div>
 
-          <div class="col-lg-12 downbord py-3">
-            <div class="row justify-content-center">
-              <div class="col-lg-8 footext text-center mb-3">
-                <h3>
-                  This Website is made with ❤ by
-                  <a href="https://www.facebook.com/xXAhmerrasXx/"
-                    >Hassan Anees</a
-                  >
-                </h3>
-              </div>
-              <div class="col-lg-3 footicon">
-                <a
-                  href="https://www.linkedin.com/in/hassan-anees-071a13224"
-                  title="linkedin"
-                  ><i class="fa-brands fa-linkedin"></i
-                ></a>
-                <a href="https://github.com/Hassona18" title="github"
-                  ><i class="fa-brands fa-github"></i
-                ></a>
-                <a
-                  href="https://instagram.com/hassan6476hassan?igshid=MzMyNGUyNmU2YQ=="
-                  title="instagram"
-                  ><i class="fa-brands fa-instagram"></i
-                ></a>
-              </div>
+        <div class="col-lg-12 downbord py-3">
+          <div class="row justify-content-center">
+            <div class="col-lg-8 footext text-center mb-3">
+              <h3>This Website is made with <span class="green" title="Love">❤</span> by
+                <a href="https://www.facebook.com/xXAhmerrasXx/">Hassan Anees</a>
+              </h3>
+            </div>
+            <div class="col-lg-3 footicon">
+              <a href="https://www.linkedin.com/in/hassan-anees-071a13224"><i class="fa-brands fa-linkedin"></i></a> <a
+                href="https://github.com/Hassona18"><i class="fa-brands fa-github"></i></a> <a
+                href="https://instagram.com/hassan6476hassan?igshid=MzMyNGUyNmU2YQ=="><i
+                  class="fa-brands fa-instagram"></i></a>
             </div>
           </div>
         </div>
       </div>
-    </footer>
-    <!-- Footer End -->
+    </div>
+  </footer>
+  <!-- Footer End -->
 
-    <script src="js/checkout.js"></script>
-  </body>
+
+
+  <script src="js/checkout.js"></script>
+</body>
+
 </html>
