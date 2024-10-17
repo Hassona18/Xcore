@@ -52,5 +52,3 @@ You should include the commands and project description in your project's **READ
 
 3. **Commit the Changes**:
    - After writing the content, scroll down and click **Commit new file** to save your README.md.
-
-Now, anyone visiting your repository will see the project description and installation instructions in the README file.
